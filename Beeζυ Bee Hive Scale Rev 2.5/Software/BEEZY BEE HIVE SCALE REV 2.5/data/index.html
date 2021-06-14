@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang='en' >
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <title>Beeζυ - Set Up</title>
+  <link rel="stylesheet" href="styles.css">
+  <script type="text/javascript" src="script.js"></script>
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+
+<div class='login-box wrapper'>
+  <h2><img src="beezy.png" width="150px" alt=""></h2>
+  <form >
+    <div class='user-box'>
+      <input type='text' name='LOCATION'  id="place" required=''>
+      <label>NAME</label>
+    </div>
+    <div class='user-box'>
+      <input type="number" id="sms"  min="1" max="4" required><br><br>
+      <label>MESSAGES</label>
+    </div>
+    <div class='user-box'>
+      <select name="pref" id="pref" onchange="showFields()">
+        <option value="sms_thingspeak">SMS & THINGSPEAK</option>
+        <option value="sms">SMS</option>
+        <option value="thingspeak">THINGSPEAK</option>
+      </select>
+      <br><br><br>
+    </div>
+    <div class='user-box'>
+      <input type='text' name='APIKEY' id="thingspeak" required=''>
+      <label id="tl">THINGSPEAK API KEY</label>
+    </div>
+    <div class='user-box'>
+      <input type="tel" id="phone" name="phone" pattern="69[0-9]{8}" required><br><br>
+      <label id="pl">PHONE NUMBER</label>
+    </div>
+    <div class='user-box'>
+      <select name="phone_telecom" id="phone_telecom">
+        <option value="internet">COSMOTE</option>
+        <option value="internet.vodafone.gr">VODAFONE</option>
+        <option value="gint.b-online.gr">WIND</option>
+      </select>
+    </div>
+
+      <br><br>
+    <a href='#'>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <input id='sub'  onclick="send()" value='Save'/>
+    </a>
+  </form>
+  <br>
+  <small id="savem" style="margin-left:65%;font-size:0px;">DATA SAVED !</small>
+</div>
+</body>
+</html>
